@@ -100,6 +100,26 @@
     "first_seen": "2026-06-14T14:55:32+02:00"
   },
   {
+    "id": "olx_1077394450",
+    "source": "olx",
+    "title": "Mazda 3",
+    "price_pln": 35000,
+    "year": 2020,
+    "mileage_km": 103000,
+    "fuel": "Benzyna",
+    "engine_cm3": 1998,
+    "power_km": 122,
+    "gearbox": "Manualna",
+    "body": "Sedan",
+    "condition": "Nieuszkodzony",
+    "righthanddrive": "po lewej",
+    "city": "Sadlno",
+    "url": "https://www.olx.pl/d/oferta/mazda-3-CID5-ID1aUDwQ.html",
+    "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/7w02yoss7y5i-PL/image;s=800x600",
+    "created": "2026-06-02T21:14:40+02:00",
+    "first_seen": "2026-06-14T16:54:34+02:00"
+  },
+  {
     "id": "olx_1077124424",
     "source": "olx",
     "title": "Mazda 3 2.0 Skyactiv-G, Salon Polska, Serwis ASO, Klimatronic, Tempomat,",
