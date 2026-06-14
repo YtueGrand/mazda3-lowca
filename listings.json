@@ -1,28 +1,5 @@
 [
   {
-    "id": "sprzedajemy_73560737",
-    "source": "sprzedajemy",
-    "model": "chr",
-    "model_label": "Toyota C-HR",
-    "title": "Toyota C-HR mata bagażnika",
-    "price_pln": 40,
-    "year": 2019,
-    "mileage_km": 100,
-    "fuel": "Hybryda",
-    "fuel_raw": "hybryda",
-    "engine_cm3": null,
-    "power_km": null,
-    "gearbox": "Automatyczna",
-    "body": "",
-    "condition": "Nieuszkodzony",
-    "righthanddrive": "po lewej",
-    "city": "Łódź",
-    "url": "https://sprzedajemy.pl/toyota-c-hr-mata-bagaznika-lodz-4-6bea9f-nr73560737",
-    "photo": "https://thumbs.img-sprzedajemy.pl/1000x901c/cb/42/a2/toyota-chr-mata-bagaznika-lodz-603719596.jpg",
-    "created": null,
-    "first_seen": "2026-06-14T19:33:57+02:00"
-  },
-  {
     "id": "sprzedajemy_73556223",
     "source": "sprzedajemy",
     "model": "corolla",
@@ -40,10 +17,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Pępowo",
+    "region": null,
+    "region_name": "",
+    "lat": null,
+    "lon": null,
     "url": "https://sprzedajemy.pl/toyota-corolla-kk2131n1-8-hybrid-comfort-k-cofania-led-salon-pl-vat-23-e-pepowo-4-6bea9f-nr73556223",
     "photo": "https://thumbs.img-sprzedajemy.pl/1000x901c/a3/7d/95/toyota-corolla-kk2131n18-hybrid-comfort-kcofania-kamera-cofania-603689680.jpg",
     "created": null,
-    "first_seen": "2026-06-14T19:33:19+02:00"
+    "first_seen": "2026-06-14T20:06:14+02:00"
   },
   {
     "id": "sprzedajemy_73505456",
@@ -63,10 +44,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Białystok",
+    "region": null,
+    "region_name": "",
+    "lat": null,
+    "lon": null,
     "url": "https://sprzedajemy.pl/toyota-corolla-23r-salon-polska-hybrid-gwaran-hybrid-1-8-rozrzad-na-lancuc-bialystok-4-6bea9f-nr73505456",
     "photo": "https://thumbs.img-sprzedajemy.pl/1000x901c/6c/d9/4f/toyota-corolla-23r-salon-polska-hybrid-gwaran-bialystok-603520235.jpg",
     "created": null,
-    "first_seen": "2026-06-14T19:33:19+02:00"
+    "first_seen": "2026-06-14T20:06:14+02:00"
   },
   {
     "id": "olx_1079535453",
@@ -86,10 +71,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Kraków",
+    "region": "malopolskie",
+    "region_name": "Małopolskie",
+    "lat": 50.02063,
+    "lon": 19.93143,
     "url": "https://www.olx.pl/d/oferta/mazda-3-CID5-ID1b3Cu9.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/98f1xuclpdml3-PL/image;s=800x600",
     "created": "2026-06-14T09:03:46+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1079450387",
@@ -109,10 +98,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Pępowo",
+    "region": "pomorskie",
+    "region_name": "Pomorskie",
+    "lat": 54.36685,
+    "lon": 18.39838,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-kk2131n-1-8-hybrid-comfort-k-cofania-led-salon-pl-vat-23-CID5-ID1b3gm7.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/8031plcs1s6t2-PL/image;s=800x600",
     "created": "2026-06-13T15:03:28+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1079329326",
@@ -132,10 +125,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Jędrzejów",
+    "region": "swietokrzyskie",
+    "region_name": "Świętokrzyskie",
+    "lat": 50.64003,
+    "lon": 20.30568,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-salon-polska-1-wlasciciel-perla-CID5-ID1b2KRv.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/sxi5josx1r622-PL/image;s=800x600",
     "created": "2026-06-12T17:58:46+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1079316549",
@@ -155,10 +152,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.28479,
+    "lon": 20.93958,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-CID5-ID1b2Hxr.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/j0vsgvwpgz402-PL/image;s=800x600",
     "created": "2026-06-12T16:49:54+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1079265278",
@@ -178,10 +179,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Lusina",
+    "region": "malopolskie",
+    "region_name": "Małopolskie",
+    "lat": 49.97003,
+    "lon": 19.93095,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-1-8-hybryda-100-bewypadkowy-CID5-ID1b2ucu.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/gh40ugszscrg3-PL/image;s=800x600",
     "created": "2026-06-12T11:54:00+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1079265234",
@@ -201,10 +206,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Ostrów Wielkopolski",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 51.65217,
+    "lon": 17.81083,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-1-8-hybryda-automat-klimatronik-CID5-ID1b2ubM.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/x5z560mcm7pd1-PL/image;s=800x600",
     "created": "2026-06-12T11:53:43+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1079263855",
@@ -224,10 +233,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Radziejowice",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.00544,
+    "lon": 20.55336,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-corolla-1-8-hybrid-comfort-98km-CID5-ID1b2tPx.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/zbmdal8px0mo2-PL/image;s=800x600",
     "created": "2026-06-12T11:45:51+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1079237190",
@@ -247,10 +260,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Zgierz",
+    "region": "lodzkie",
+    "region_name": "Łódzkie",
+    "lat": 51.85836,
+    "lon": 19.40687,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-CID5-ID1b2mTs.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/bwdxgxcxak061-PL/image;s=800x600",
     "created": "2026-06-12T08:58:56+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1079233700",
@@ -270,10 +287,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "",
     "city": "Jaworzno",
+    "region": "slaskie",
+    "region_name": "Śląskie",
+    "lat": 50.21052,
+    "lon": 19.26565,
     "url": "https://www.olx.pl/d/oferta/cesja-leasingu-toyota-c-hr-2-0-hybrid-dynamic-force-CID5-ID1b2lZa.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/e1jnvklhw05d3-PL/image;s=800x600",
     "created": "2026-06-12T08:25:26+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1079097681",
@@ -293,10 +314,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Nowe Opole",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.17972,
+    "lon": 22.18492,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-139-tys-km-1-8-hybryda-serwisowany-CID5-ID1b1MBj.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/2qef1b0luwos1-PL/image;s=800x600",
     "created": "2026-06-11T12:43:47+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1079011466",
@@ -316,10 +341,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Pruszcz Gdański",
+    "region": "pomorskie",
+    "region_name": "Pomorskie",
+    "lat": 54.26023,
+    "lon": 18.64818,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-1-8-CID5-ID1b1qaK.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/4dxwlbn5virr-PL/image;s=800x600",
     "created": "2026-06-10T22:20:20+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1078916075",
@@ -339,10 +368,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Dojazdów",
+    "region": "malopolskie",
+    "region_name": "Małopolskie",
+    "lat": 50.12109,
+    "lon": 20.11412,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-salon-polska-jeden-wlasciciel-oryginalny-przebieg-68tys-km-CID5-ID1b11mb.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/0nwhltt1ld702-PL/image;s=800x600",
     "created": "2026-06-10T16:13:55+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1078897179",
@@ -362,10 +395,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.24336,
+    "lon": 20.90661,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-salon-polska-fv-vat-23-gwarancja-kamera-czujniki-przod-i-tyl-CID5-ID1b0Vrp.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/8vtn2ez1am2g2-PL/image;s=800x600",
     "created": "2026-06-10T14:22:46+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1078726685",
@@ -385,10 +422,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.28479,
+    "lon": 20.93958,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-hybryda-kamera-bluetooth-acc-automat-CID5-ID1b0e5w.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/o18lgpwk16xo3-PL/image;s=800x600",
     "created": "2026-06-09T16:41:54+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1078711570",
@@ -408,10 +449,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.1401,
+    "lon": 21.03333,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-cena-brutto-stan-idealny-CID5-ID1b0a9I.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/exfy118j68ul-PL/image;s=800x600",
     "created": "2026-06-09T15:14:15+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1078710842",
@@ -431,10 +476,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Gdynia",
+    "region": "pomorskie",
+    "region_name": "Pomorskie",
+    "lat": 54.49282,
+    "lon": 18.54756,
     "url": "https://www.olx.pl/d/oferta/mazda-3-2-0-120km-skymotion-salon-pl-dealer-mazda-i-rej-2017-CID5-ID1b09XY.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/w1iiw6okkhno2-PL/image;s=800x600",
     "created": "2026-06-09T15:09:56+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1078709922",
@@ -454,10 +503,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Katowice",
+    "region": "slaskie",
+    "region_name": "Śląskie",
+    "lat": 50.25559,
+    "lon": 19.01867,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-automat-navi-kamera-acc-led-CID5-ID1b09J8.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/h98fggmll0kn2-PL/image;s=800x600",
     "created": "2026-06-09T15:04:44+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1078619378",
@@ -477,10 +530,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "",
     "city": "Rzeszów",
+    "region": "podkarpackie",
+    "region_name": "Podkarpackie",
+    "lat": 50.04152,
+    "lon": 22.00953,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-hybryd-2019-CID5-ID1aZMaK.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/uots6razb14s-PL/image;s=800x600",
     "created": "2026-06-09T09:36:27+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1078582768",
@@ -500,10 +557,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Sochaczew-Wieś",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.22608,
+    "lon": 20.28314,
     "url": "https://www.olx.pl/d/oferta/mazda-3-przebieg-38000-stan-idealny-podgrzewana-kierownica-i-fotele-CID5-ID1aZCEg.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/u64xh0o7k8ag1-PL/image;s=800x600",
     "created": "2026-06-08T22:37:51+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1078454982",
@@ -523,10 +584,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Jedlanka",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 51.52959,
+    "lon": 21.10167,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-CID5-ID1aZ5pc.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/cgiuqg2vz02c2-PL/image;s=800x600",
     "created": "2026-06-08T11:52:46+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1078445801",
@@ -546,10 +611,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Bilcza",
+    "region": "swietokrzyskie",
+    "region_name": "Świętokrzyskie",
+    "lat": 50.786,
+    "lon": 20.61652,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-1-8-98-122kmsalon-pliwlserwisowanyasokamerazadbanyfv23-CID5-ID1aZ317.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/dmv1xae4c366-PL/image;s=800x600",
     "created": "2026-06-08T11:02:48+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1078373680",
@@ -569,10 +638,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Garnek",
+    "region": "slaskie",
+    "region_name": "Śląskie",
+    "lat": 50.88556,
+    "lon": 19.45693,
     "url": "https://www.olx.pl/d/oferta/mazda-3-wersja-skyactiv-2-0-CID5-ID1aYKfS.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/cloy3ox5fcne-PL/image;s=800x600",
     "created": "2026-06-07T20:00:12+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1077955709",
@@ -592,10 +665,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Łódź",
+    "region": "lodzkie",
+    "region_name": "Łódzkie",
+    "lat": 51.76513,
+    "lon": 19.53628,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-1-8-98-koni-super-stan-1wl-salon-pl-fv-23-sb739ey-CID5-ID1aVZvp.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/6zujvf21wk2o1-PL/image;s=800x600",
     "created": "2026-06-05T11:44:53+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1077671712",
@@ -615,10 +692,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Kamień Pomorski",
+    "region": "zachodniopomorskie",
+    "region_name": "Zachodniopomorskie",
+    "lat": 53.97046,
+    "lon": 14.77527,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-1-8-hybryd-comfort-CID5-ID1aWNDO.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/mjx812fpavk5-PL/image;s=800x600",
     "created": "2026-06-03T22:00:44+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1077633161",
@@ -638,10 +719,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Pleszew",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 51.88859,
+    "lon": 17.78953,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-CID5-ID1aWDC1.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/5kv8temnxirl3-PL/image;s=800x600",
     "created": "2026-06-03T18:12:01+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1077503073",
@@ -661,10 +746,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Ełk",
+    "region": "warminsko-mazurskie",
+    "region_name": "Warmińsko-mazurskie",
+    "lat": 53.80957,
+    "lon": 22.33548,
     "url": "https://www.olx.pl/d/oferta/mazda-3-mazda-3-skyactiv-g-2-0-120-km-optimum-skora-bose-CID5-ID1aW5LP.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/ltefz2a92j8n2-PL/image;s=800x600",
     "created": "2026-06-03T10:17:34+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1077394450",
@@ -684,10 +773,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Sadlno",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 52.44566,
+    "lon": 18.4692,
     "url": "https://www.olx.pl/d/oferta/mazda-3-CID5-ID1aUDwQ.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/7w02yoss7y5i-PL/image;s=800x600",
     "created": "2026-06-02T21:14:40+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1077308798",
@@ -707,10 +800,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "",
     "city": "Szczecin",
+    "region": "zachodniopomorskie",
+    "region_name": "Zachodniopomorskie",
+    "lat": 53.39368,
+    "lon": 14.51525,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-1-8-hybrid-kombi-active-polski-salon-fv23-aso-CID5-ID1aUhem.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/u3swb10rojjy-PL/image;s=800x600",
     "created": "2026-06-02T15:06:53+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1077255024",
@@ -730,10 +827,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Gdynia",
+    "region": "pomorskie",
+    "region_name": "Pomorskie",
+    "lat": 54.47293,
+    "lon": 18.45966,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-CID5-ID1aU3f2.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/zdzm8hlt52k33-PL/image;s=800x600",
     "created": "2026-06-02T11:22:42+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1077174686",
@@ -753,10 +854,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Janowice Wielkie",
+    "region": "dolnoslaskie",
+    "region_name": "Dolnośląskie",
+    "lat": 50.88183,
+    "lon": 15.91657,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-CID5-ID1aTIlg.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/n12u6vh7aw0w-PL/image;s=800x600",
     "created": "2026-06-01T20:01:12+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1077124424",
@@ -776,10 +881,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "",
     "city": "Łódź",
+    "region": "lodzkie",
+    "region_name": "Łódzkie",
+    "lat": 51.76454,
+    "lon": 19.41237,
     "url": "https://www.olx.pl/d/oferta/mazda-3-2-0-skyactiv-g-salon-polska-serwis-aso-klimatronic-tempomat-CID5-ID1aTwgA.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/1297gwp3kbim1-PL/image;s=800x600",
     "created": "2026-06-01T15:23:00+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1076970617",
@@ -799,10 +908,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Ostrołęka",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 53.07736,
+    "lon": 21.55409,
     "url": "https://www.olx.pl/d/oferta/mazda-3-7-lat-w-moich-rekach-zadbana-niski-przebieg-CID5-ID1aSRfP.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/j0hbec3xsrtt3-PL/image;s=800x600",
     "created": "2026-05-31T17:33:24+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1076955238",
@@ -822,10 +935,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Pruszków",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.17004,
+    "lon": 20.80789,
     "url": "https://www.olx.pl/d/oferta/mazda-3-skyactiv-2-0-benzyna-CID5-ID1aSNfM.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/28033lxlluaz1-PL/image;s=800x600",
     "created": "2026-05-31T16:16:51+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1076831195",
@@ -845,10 +962,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Bielsko-Biała",
+    "region": "slaskie",
+    "region_name": "Śląskie",
+    "lat": 49.82198,
+    "lon": 19.05043,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-CID5-ID1aSgZ5.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/mrytzfvliki63-PL/image;s=800x600",
     "created": "2026-05-30T19:19:42+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1076799769",
@@ -868,10 +989,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Rumia",
+    "region": "pomorskie",
+    "region_name": "Pomorskie",
+    "lat": 54.57078,
+    "lon": 18.38782,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-rej-2024-lpg-lekko-uszkodzony-f-vat23-cena-brutto-CID5-ID1aS8Od.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/8uwox6vpw24n1-PL/image;s=800x600",
     "created": "2026-05-30T16:15:40+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1076786803",
@@ -891,10 +1016,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Katowice",
+    "region": "slaskie",
+    "region_name": "Śląskie",
+    "lat": 50.26683,
+    "lon": 18.98465,
     "url": "https://www.olx.pl/d/oferta/mazda-3-2-0-120km-lift-salon-pl-ii-wl-bezwypadkowy-serwisowany-CID5-ID1aS5r5.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/8idnoi1bct083-PL/image;s=800x600",
     "created": "2026-05-30T15:05:36+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1076714469",
@@ -914,10 +1043,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.21374,
+    "lon": 20.97928,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-salon-pl-faktura-vat-23-hybryda-CID5-ID1aRMCp.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/5e4h539ew5nq2-PL/image;s=800x600",
     "created": "2026-05-30T00:22:31+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1076551070",
@@ -937,10 +1070,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Białystok",
+    "region": "podlaskie",
+    "region_name": "Podlaskie",
+    "lat": 53.11209,
+    "lon": 23.12153,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-23-tylko-salon-polska-1wlasciciel-gwarancja-serwis-aso-154-CID5-ID1aR66V.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/2jlauqzfid231-PL/image;s=800x600",
     "created": "2026-05-29T07:58:14+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1076490248",
@@ -960,10 +1097,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Kępno",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 51.28176,
+    "lon": 17.99116,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-super-stan-bogate-wyposarzenie-CID5-ID1aQQhV.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/doz3k6u6sdi21-PL/image;s=800x600",
     "created": "2026-05-28T18:23:40+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1076424315",
@@ -983,10 +1124,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.1401,
+    "lon": 21.03333,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-stan-idealny-fv23-CID5-ID1aQz8w.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/g0kywze99cja1-PL/image;s=800x600",
     "created": "2026-05-28T12:52:34+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1076339631",
@@ -1006,10 +1151,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Marki",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.32129,
+    "lon": 21.10589,
     "url": "https://www.olx.pl/d/oferta/mazda-3-CID5-ID1aQd6D.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/9rcbiyxqiay6-PL/image;s=800x600",
     "created": "2026-05-27T23:05:43+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1076102810",
@@ -1029,10 +1178,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.19255,
+    "lon": 20.93517,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-2022-r-151-500-km-stan-dobry-CID5-ID1aPduV.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/biy08zskttyq-PL/image;s=800x600",
     "created": "2026-05-26T21:23:01+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1076102225",
@@ -1052,10 +1205,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Słubice",
+    "region": "lubuskie",
+    "region_name": "Lubuskie",
+    "lat": 52.35254,
+    "lon": 14.57418,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-CID5-ID1aPdlw.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/rck3ahw4ru7t2-PL/image;s=800x600",
     "created": "2026-05-26T21:19:35+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1075999321",
@@ -1075,10 +1232,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Poznań",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 52.40876,
+    "lon": 16.92942,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-hybryda-1-8-CID5-ID1aOMzL.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/jiyfectv9acg-PL/image;s=800x600",
     "created": "2026-05-26T12:31:32+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1075991812",
@@ -1098,10 +1259,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.1401,
+    "lon": 21.03333,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-salon-polska-bezwypadkowy-cena-brutto-fv23-CID5-ID1aOKCE.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/opc80aiv79c22-PL/image;s=800x600",
     "created": "2026-05-26T11:51:34+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1075904688",
@@ -1121,10 +1286,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.33008,
+    "lon": 20.99661,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-piekna-i-zadbana-toyota-corolla-CID5-ID1aOnXq.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/jh8vit2xoir2-PL/image;s=800x600",
     "created": "2026-05-25T20:10:44+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1075886443",
@@ -1144,10 +1313,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Świętochłowice",
+    "region": "slaskie",
+    "region_name": "Śląskie",
+    "lat": 50.2977,
+    "lon": 18.91066,
     "url": "https://www.olx.pl/d/oferta/mazda-3-sedan-3-generacja-CID5-ID1aOjd9.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/4h1l1xwbhce43-PL/image;s=800x600",
     "created": "2026-05-25T18:38:19+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1075872305",
@@ -1167,10 +1340,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Sionna",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.20078,
+    "lon": 22.01735,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-1-8-hybrid-comfort-e-cvt-salon-pl-f-vat-23-CID5-ID1aOfx7.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/y93owb9jms7h2-PL/image;s=800x600",
     "created": "2026-05-25T17:30:02+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1075719190",
@@ -1190,10 +1367,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Kielce",
+    "region": "swietokrzyskie",
+    "region_name": "Świętokrzyskie",
+    "lat": 50.87056,
+    "lon": 20.62798,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-salon-pl-1wl-bezwypadkowa-gwar-fabryczna-serwis-aso-CID5-ID1aNBHv.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/q0qwiwwgkuny2-PL/image;s=800x600",
     "created": "2026-05-24T22:00:35+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1075631465",
@@ -1213,10 +1394,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Racot",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 52.05648,
+    "lon": 16.71208,
     "url": "https://www.olx.pl/d/oferta/mazda-3-mazda-3-sedan-CID5-ID1aNeSB.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/q72dz2uapxig3-PL/image;s=800x600",
     "created": "2026-05-24T14:04:03+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1075574712",
@@ -1236,10 +1421,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Pabianice",
+    "region": "lodzkie",
+    "region_name": "Łódzkie",
+    "lat": 51.6637,
+    "lon": 19.35685,
     "url": "https://www.olx.pl/d/oferta/mazda-3-mazda-stan-idealny-CID5-ID1aN07e.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/dpn00krel6r93-PL/image;s=800x600",
     "created": "2026-05-24T08:48:47+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1075412942",
@@ -1259,10 +1448,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Białystok",
+    "region": "podlaskie",
+    "region_name": "Podlaskie",
+    "lat": 53.11209,
+    "lon": 23.12153,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-23r-salon-polska-hybrid-gwar-hybrid-1-8-bezwypadkowe-aso-CID5-ID1aMk22.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/fdfpd839yi64-PL/image;s=800x600",
     "created": "2026-05-23T06:42:00+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1075221656",
@@ -1282,10 +1475,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Śrem",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 52.09116,
+    "lon": 17.01848,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-faktura-vat-toyota-corolla-hatchback-super-stan-CID5-ID1aLvgM.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/0n1q31blcjx93-PL/image;s=800x600",
     "created": "2026-05-22T09:44:57+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1074825357",
@@ -1305,10 +1502,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Żelków",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.14079,
+    "lon": 22.18639,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-CID5-ID1aJRaR.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/bnj2a13lnir3-PL/image;s=800x600",
     "created": "2026-05-20T17:48:54+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1074755912",
@@ -1328,10 +1529,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.24336,
+    "lon": 20.90661,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-salon-pl-aso-niski-przebieg-pierwszy-wlasciciel-raport-autodna-CID5-ID1aJz6M.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/ktweijerhf3w2-PL/image;s=800x600",
     "created": "2026-05-20T12:48:29+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1074700716",
@@ -1351,10 +1556,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Olsztyn",
+    "region": "warminsko-mazurskie",
+    "region_name": "Warmińsko-mazurskie",
+    "lat": 53.77602,
+    "lon": 20.47703,
     "url": "https://www.olx.pl/d/oferta/mazda-3-2018r-benzyna-CID5-ID1aJkKv.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/swmn52hby6kj3-PL/image;s=800x600",
     "created": "2026-05-20T08:30:27+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1074453233",
@@ -1374,10 +1583,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Leszno",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 51.84266,
+    "lon": 16.57781,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-toyota-chr-hybryda-2018r-zarejestrowany-CID5-ID1aIimR.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/4e2skt5i23u7-PL/image;s=800x600",
     "created": "2026-05-19T07:50:45+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1074329406",
@@ -1397,10 +1610,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.28479,
+    "lon": 20.93958,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-automat-navi-kamera-acc-led-CID5-ID1aHM9E.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/pq7kcxmn8lqh3-PL/image;s=800x600",
     "created": "2026-05-18T15:34:04+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1074295824",
@@ -1420,10 +1637,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "",
     "city": "Stalowa Wola",
+    "region": "podkarpackie",
+    "region_name": "Podkarpackie",
+    "lat": 50.58448,
+    "lon": 22.05793,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-serwisowany-mozliwosc-finansowania-CID5-ID1aHDq0.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/eqc05m95vxjp-PL/image;s=800x600",
     "created": "2026-05-18T13:46:07+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1074278764",
@@ -1443,10 +1664,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Janowice Wielkie",
+    "region": "dolnoslaskie",
+    "region_name": "Dolnośląskie",
+    "lat": 50.88183,
+    "lon": 15.91657,
     "url": "https://www.olx.pl/d/oferta/toyota-chr-prestige-CID5-ID1aHyYQ.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/z0x27zxk86pe3-PL/image;s=800x600",
     "created": "2026-05-18T12:41:13+02:00",
-    "first_seen": "2026-06-14T19:43:19+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1074243829",
@@ -1466,10 +1691,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Kozłów",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 51.46269,
+    "lon": 21.23894,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-corolla-hybrid-CID5-ID1aHpTn.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/2iuow9bistkp2-PL/image;s=800x600",
     "created": "2026-05-18T09:55:48+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1073910445",
@@ -1489,10 +1718,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Rumia",
+    "region": "pomorskie",
+    "region_name": "Pomorskie",
+    "lat": 54.57078,
+    "lon": 18.38782,
     "url": "https://www.olx.pl/d/oferta/mazda-3-automat-2017-r-CID5-ID1aG1ad.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/l7jo054kd9re1-PL/image;s=800x600",
     "created": "2026-05-16T20:30:28+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1073353323",
@@ -1512,10 +1745,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.15926,
+    "lon": 21.09296,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-toyota-corolla-1-8-hybrid-active-fv23-serwis-aso-gwarancja-CID5-ID1aDGen.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/ehbcewbdp8qz2-PL/image;s=800x600",
     "created": "2026-05-14T13:52:30+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1072481128",
@@ -1535,10 +1772,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Gdańsk",
+    "region": "pomorskie",
+    "region_name": "Pomorskie",
+    "lat": 54.39785,
+    "lon": 18.61005,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-toyota-corolla-1-8-hybrid-active-CID5-ID1aA1kI.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/k6w2p86eh1w71-PL/image;s=800x600",
     "created": "2026-05-11T09:54:42+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1072256918",
@@ -1558,10 +1799,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Ząbki",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.28983,
+    "lon": 21.11357,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-1-8-hybryda-lpg-CID5-ID1az50q.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/rwsw82os4oqi-PL/image;s=800x600",
     "created": "2026-05-09T20:23:36+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1071584472",
@@ -1581,10 +1826,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Ząbki",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.28983,
+    "lon": 21.11357,
     "url": "https://www.olx.pl/d/oferta/mazda-3-mazda-3-2-0-automat-CID5-ID1avg4v.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/y2bh7d4wkqi32-PL/image;s=800x600",
     "created": "2026-05-06T20:15:44+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1071518847",
@@ -1604,10 +1853,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Buk",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 52.35477,
+    "lon": 16.51973,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-toyota-corolla-e21-1-8-hybrid-2022-CID5-ID1awZ03.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/vquzt1k0sxqs3-PL/image;s=800x600",
     "created": "2026-05-06T15:52:33+02:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1071172619",
@@ -1627,10 +1880,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Białystok",
+    "region": "podlaskie",
+    "region_name": "Podlaskie",
+    "lat": 53.14037,
+    "lon": 23.13265,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-2019-keyless-radar-laneassist-CID5-ID1auvWJ.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/0lw8au5g4nkr-PL/image;s=800x600",
     "created": "2026-05-04T23:36:51+02:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1068952612",
@@ -1650,10 +1907,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Kłodzko",
+    "region": "dolnoslaskie",
+    "region_name": "Dolnośląskie",
+    "lat": 50.43437,
+    "lon": 16.65733,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-toyota-corolla-hatchback-1-8-hybrid-salon-pl-automat-zamiana-suv-CID5-ID1aldpa.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/aiv1ujp1r0at2-PL/image;s=800x600",
     "created": "2026-04-23T14:52:33+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1066051779",
@@ -1673,10 +1934,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.23474,
+    "lon": 21.01522,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-CID5-ID1a92Lx.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/r7zmnjtxozsb1-PL/image;s=800x600",
     "created": "2026-04-09T17:51:46+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1065063024",
@@ -1696,10 +1961,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Nałęczów",
+    "region": "lubelskie",
+    "region_name": "Lubelskie",
+    "lat": 51.28686,
+    "lon": 22.21664,
     "url": "https://www.olx.pl/d/oferta/mazda-3-z-polskiego-salonu-CID5-ID1a4TxS.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/dzoau9stkhdx-PL/image;s=800x600",
     "created": "2026-04-04T15:44:43+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1061461498",
@@ -1719,10 +1988,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Kalisz",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 51.76272,
+    "lon": 18.09094,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-1-8-hybryda-122km-navi-kamera-tempomat-CID5-ID19PMCK.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/2uoh2mibq7z81-PL/image;s=800x600",
     "created": "2026-03-17T20:12:50+01:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1059401203",
@@ -1742,10 +2015,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Pleszew",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 51.88859,
+    "lon": 17.78953,
     "url": "https://www.olx.pl/d/oferta/toyota-c-hr-toytota-c-hr-2022-rok-hybryda-CID5-ID19H8Eb.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/9e7eteltxa0u3-PL/image;s=800x600",
     "created": "2026-03-08T14:48:55+01:00",
-    "first_seen": "2026-06-14T19:33:33+02:00"
+    "first_seen": "2026-06-14T20:06:17+02:00"
   },
   {
     "id": "olx_1038166054",
@@ -1765,10 +2042,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Konstancin-Jeziorna",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.09094,
+    "lon": 21.11776,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-122-km-i-wlas-tech-salonpl-serwis-aso-do-konca-bezwypadko-gwarancja-CID5-ID18g2pM.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/88j0mizinwh11-PL/image;s=800x600",
     "created": "2025-11-14T08:12:40+01:00",
-    "first_seen": "2026-06-14T19:33:00+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1031338118",
@@ -1788,10 +2069,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "po lewej",
     "city": "Warszawa",
+    "region": "mazowieckie",
+    "region_name": "Mazowieckie",
+    "lat": 52.23876,
+    "lon": 21.08553,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-toyota-corolla-touring-1-8-hybrid-e-cvt-led-kamera-tempomat-fv-CID5-ID17No9M.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/wxy17e2a615w1-PL/image;s=800x600",
     "created": "2025-10-10T13:32:00+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   },
   {
     "id": "olx_1031168707",
@@ -1811,10 +2096,14 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "",
     "city": "Ryczywół",
+    "region": "wielkopolskie",
+    "region_name": "Wielkopolskie",
+    "lat": 52.81208,
+    "lon": 16.83672,
     "url": "https://www.olx.pl/d/oferta/mazda-3-skyactiv-2-0-benzyna-CID5-ID17MG5l.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/5uwl4xojogww1-PL/image;s=800x600",
     "created": "2025-10-09T14:25:16+02:00",
-    "first_seen": "2026-06-14T19:32:43+02:00"
+    "first_seen": "2026-06-14T20:05:42+02:00"
   },
   {
     "id": "olx_1023980745",
@@ -1834,9 +2123,13 @@
     "condition": "Nieuszkodzony",
     "righthanddrive": "",
     "city": "Mielec",
+    "region": "podkarpackie",
+    "region_name": "Podkarpackie",
+    "lat": 50.28828,
+    "lon": 21.42617,
     "url": "https://www.olx.pl/d/oferta/toyota-corolla-1-8-hybrid-active-122km-CID5-ID17ivat.html",
     "photo": "https://ireland.apollo.olxcdn.com:443/v1/files/17cxjufdpbvr2-PL/image;s=800x600",
     "created": "2025-09-03T13:53:26+02:00",
-    "first_seen": "2026-06-14T19:43:05+02:00"
+    "first_seen": "2026-06-14T20:05:58+02:00"
   }
 ]

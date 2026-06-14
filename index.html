@@ -45,6 +45,16 @@
     font-size:11px;font-weight:800;display:inline-grid;place-items:center}
   .tab.active .cnt{opacity:.95}
 
+  /* PASEK: region + odleglosc */
+  .subbar{display:flex;gap:8px;margin-top:10px;align-items:stretch}
+  .seg{display:flex;flex:1;border:1px solid var(--border);border-radius:11px;overflow:hidden;background:var(--surface)}
+  .seg-btn{flex:1;padding:9px 8px;border:0;background:transparent;color:var(--muted);font-weight:700;font-size:13px;cursor:pointer}
+  .seg-btn.active{background:var(--accent);color:#fff}
+  .geo{flex:0 0 auto;display:flex;align-items:center;gap:6px;padding:9px 12px;border:1px solid var(--border);
+    border-radius:11px;background:var(--surface);color:var(--text);font-weight:700;font-size:13px;cursor:pointer}
+  .geo.on{background:var(--accent-soft);border-color:var(--accent);color:#fff}
+  .geo.locating{opacity:.6}
+
   .stats{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13px;color:var(--muted);flex-wrap:wrap}
   .pill{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;
     background:var(--surface2);border:1px solid var(--border);font-weight:600}
@@ -119,6 +129,14 @@
 
   <div class="tabs" id="tabs"></div>
 
+  <div class="subbar">
+    <div class="seg" id="regionSeg">
+      <button class="seg-btn active" data-reg="">🇵🇱 Cała Polska</button>
+      <button class="seg-btn" data-reg="dolnoslaskie">Dolny Śląsk</button>
+    </div>
+    <button class="geo" id="geoBtn" title="Pokaż odległość ode mnie">📍 ode mnie</button>
+  </div>
+
   <div class="stats">
     <span class="pill" id="count">— ofert</span>
     <span class="pill new" id="newCount" hidden>0 nowych</span>
@@ -132,6 +150,7 @@
       <option value="price_desc">Cena: malejąco</option>
       <option value="year_desc">Rocznik: najnowsze</option>
       <option value="mileage_asc">Przebieg: najmniejszy</option>
+      <option value="near">📍 Najbliżej mnie</option>
     </select>
     <button class="btn" id="filterToggle">⚙ Filtry</button>
   </div>
@@ -164,6 +183,8 @@ let ALL = [];
 let CURRENT = null;
 let renderLimit = BATCH;
 let filters = {priceMin:null,priceMax:null,yearMin:null,yearMax:null,fuels:new Set(),srcs:new Set()};
+let regionFilter = localStorage.getItem("m3_region") || "";   // "" = cała Polska, "dolnoslaskie"
+let userLoc = JSON.parse(localStorage.getItem("m3_userloc") || "null");
 
 const $ = s => document.querySelector(s);
 const fmt = n => n==null ? null : n.toLocaleString("pl-PL");
@@ -176,6 +197,13 @@ function engineText(o){
   if(o.engine_cm3)p.push((o.engine_cm3/1000).toFixed(1).replace(".",",")+" l");
   if(o.power_km)p.push(o.power_km+" KM");
   return p.join(" · ");
+}
+function distKm(o){
+  if(!userLoc || o.lat==null || o.lon==null) return null;
+  const R=6371, rad=Math.PI/180;
+  const dLat=(o.lat-userLoc.lat)*rad, dLon=(o.lon-userLoc.lon)*rad;
+  const a=Math.sin(dLat/2)**2 + Math.cos(userLoc.lat*rad)*Math.cos(o.lat*rad)*Math.sin(dLon/2)**2;
+  return Math.round(R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a)));
 }
 function timeAgo(iso){
   if(!iso) return "";
@@ -197,7 +225,7 @@ function buildTabs(){
   const models=modelsPresent();
   if(!CURRENT || !models.includes(CURRENT)) CURRENT = models[0] || null;
   $("#tabs").innerHTML = models.map(m=>{
-    const all=ALL.filter(o=>o.model===m);
+    const all=ALL.filter(o=>o.model===m && (!regionFilter || o.region===regionFilter));
     const nw=all.filter(o=>!seen.has(o.id)).length;
     return `<button class="tab ${m===CURRENT?'active':''}" data-m="${m}">
       ${labelOf(m)} <span class="cnt">${all.length}</span>${nw?`<span class="nb">${nw}</span>`:''}</button>`;
@@ -229,6 +257,7 @@ function applyFilters(){
 }
 function passes(o){
   if(o.model!==CURRENT) return false;
+  if(regionFilter && o.region!==regionFilter) return false;
   if(filters.priceMin!=null && (o.price_pln==null||o.price_pln<filters.priceMin)) return false;
   if(filters.priceMax!=null && (o.price_pln==null||o.price_pln>filters.priceMax)) return false;
   if(filters.yearMin!=null && (o.year==null||o.year<filters.yearMin)) return false;
@@ -240,7 +269,8 @@ function passes(o){
 function sortList(list){
   const v=$("#sort").value;
   const key={price_asc:o=>o.price_pln??Infinity,price_desc:o=>-(o.price_pln??-Infinity),
-    year_desc:o=>-(o.year??-Infinity),mileage_asc:o=>o.mileage_km??Infinity}[v];
+    year_desc:o=>-(o.year??-Infinity),mileage_asc:o=>o.mileage_km??Infinity,
+    near:o=>distKm(o)??Infinity}[v];
   if(key) return [...list].sort((a,b)=>key(a)-key(b));
   return [...list].sort((a,b)=>(b.created||b.first_seen||"").localeCompare(a.created||a.first_seen||""));
 }
@@ -250,13 +280,15 @@ function cardHTML(o,isNew){
   const specs=[o.year&&`📅 ${o.year}`, o.mileage_km!=null&&`🛣 ${fmt(o.mileage_km)} km`,
     engineText(o)&&`⚙ ${engineText(o)}`, o.gearbox&&`🔧 ${o.gearbox}`, o.body&&`🚙 ${o.body}`]
     .filter(Boolean).map(s=>`<span class="spec">${s}</span>`).join("");
+  const d=distKm(o);
+  const distStr = d!=null ? ` • <b style="color:#fff">${d} km od Ciebie</b>` : '';
   return `<article class="card ${isNew?'is-new':''}">
     <div class="thumb">${img}${isNew?'<span class="badge new">NOWE</span>':''}<span class="badge src">${(o.source||'').toUpperCase()}</span></div>
     <div class="body">
       <div class="title">${o.title||o.model_label}</div>
       <div class="price">${o.price_pln!=null?fmt(o.price_pln)+' <small>zł</small>':'<small>cena: zapytaj</small>'}</div>
       <div class="specs">${specs}</div>
-      <div class="meta">📍 ${o.city||'—'} • ${timeAgo(o.created||o.first_seen)}</div>
+      <div class="meta">📍 ${o.city||'—'}${distStr} • ${timeAgo(o.created||o.first_seen)}</div>
       <a class="open" href="${o.url}" target="_blank" rel="noopener">Otwórz ofertę ↗</a>
     </div></article>`;
 }
@@ -286,7 +318,10 @@ async function load(){
     const r=await fetch("listings.json?cb="+Date.now(),{cache:"no-store"});
     ALL=await r.json();
     if(localStorage.getItem(LS_SEEN)===null) saveSeen(new Set(ALL.map(o=>o.id)));
-    buildTabs(); buildChips(); render();
+    buildTabs();
+    document.querySelectorAll("#regionSeg .seg-btn").forEach(x=>x.classList.toggle("active",x.dataset.reg===regionFilter));
+    $("#geoBtn").classList.toggle("on",!!userLoc);
+    buildChips(); render();
     $("#updated").textContent="⟳ "+new Date().toLocaleTimeString("pl-PL",{hour:"2-digit",minute:"2-digit"});
   }catch(e){
     $("#list").innerHTML=`<div class="state"><div class="big">⚠️</div>Nie udało się wczytać ofert.<br><small>${e}</small></div>`;
@@ -300,6 +335,26 @@ $("#applyFilters").onclick=()=>{ applyFilters(); $("#filters").classList.remove(
 $("#clearFilters").onclick=()=>{ filters={priceMin:null,priceMax:null,yearMin:null,yearMax:null,fuels:new Set(),srcs:new Set()};
   ["priceMin","priceMax","yearMin","yearMax"].forEach(id=>$("#"+id).value=""); buildChips(); renderLimit=BATCH; render(); };
 $("#markRead").onclick=()=>{ const s=seenSet(); ALL.filter(o=>o.model===CURRENT).forEach(o=>s.add(o.id)); saveSeen(s); buildTabs(); render(); };
+
+document.querySelectorAll("#regionSeg .seg-btn").forEach(b=>b.onclick=()=>{
+  regionFilter=b.dataset.reg; localStorage.setItem("m3_region",regionFilter);
+  document.querySelectorAll("#regionSeg .seg-btn").forEach(x=>x.classList.toggle("active",x===b));
+  renderLimit=BATCH; buildTabs(); render();
+});
+$("#geoBtn").onclick=()=>{
+  const btn=$("#geoBtn");
+  if(userLoc){ userLoc=null; localStorage.removeItem("m3_userloc"); btn.classList.remove("on");
+    if($("#sort").value==="near") $("#sort").value="new"; render(); return; }
+  if(!navigator.geolocation){ alert("Lokalizacja niedostępna w tej przeglądarce."); return; }
+  btn.classList.add("locating");
+  navigator.geolocation.getCurrentPosition(pos=>{
+    userLoc={lat:pos.coords.latitude, lon:pos.coords.longitude};
+    localStorage.setItem("m3_userloc", JSON.stringify(userLoc));
+    btn.classList.remove("locating"); btn.classList.add("on");
+    $("#sort").value="near"; renderLimit=BATCH; render();
+  }, ()=>{ btn.classList.remove("locating"); alert("Nie udało się pobrać lokalizacji (sprawdź uprawnienia w przeglądarce)."); },
+  {enableHighAccuracy:false, timeout:10000, maximumAge:600000});
+};
 document.addEventListener("visibilitychange",()=>{ if(!document.hidden) load(); });
 
 let deferredPrompt=null;
