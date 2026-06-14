@@ -4,159 +4,127 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0d0e11">
-<title>Mazda 3 — Łowca ogłoszeń</title>
+<title>Łowca aut — Mazda 3 · Corolla · C-HR</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon.svg">
 <style>
   :root{
     --bg:#0d0e11; --surface:#16181d; --surface2:#1d2026; --border:#2a2e37;
     --text:#f3f4f6; --muted:#99a0ac; --accent:#e0142c; --accent-soft:rgba(224,20,44,.16);
-    --new:#ffc233; --ok:#34d399; --radius:16px;
-    --shadow:0 6px 20px rgba(0,0,0,.35);
+    --new:#ffc233; --ok:#34d399; --radius:16px; --shadow:0 6px 20px rgba(0,0,0,.35);
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   html,body{margin:0;padding:0}
-  body{
-    background:var(--bg); color:var(--text);
+  body{background:var(--bg);color:var(--text);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    padding-bottom:env(safe-area-inset-bottom);
-    -webkit-font-smoothing:antialiased;
-  }
+    padding-bottom:env(safe-area-inset-bottom);-webkit-font-smoothing:antialiased;}
   a{color:inherit;text-decoration:none}
 
-  /* ---------- HEADER ---------- */
-  header{
-    position:sticky; top:0; z-index:20;
-    background:rgba(13,14,17,.92); backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--border);
-    padding:calc(env(safe-area-inset-top) + 12px) 14px 10px;
-  }
+  header{position:sticky;top:0;z-index:20;background:rgba(13,14,17,.93);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);padding:calc(env(safe-area-inset-top) + 12px) 14px 0;}
   .bar{display:flex;align-items:center;gap:10px}
-  .logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:18px;letter-spacing:.2px}
-  .logo .car{
-    width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
-    background:var(--accent);font-size:17px;box-shadow:0 3px 10px var(--accent-soft);
-  }
-  .logo small{display:block;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.3px}
+  .logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:17px}
+  .logo .car{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+    background:var(--accent);font-size:17px}
+  .logo small{display:block;font-size:11px;font-weight:600;color:var(--muted)}
   .spacer{flex:1}
-  .iconbtn{
-    width:40px;height:40px;border-radius:11px;border:1px solid var(--border);
-    background:var(--surface);color:var(--text);font-size:17px;display:grid;place-items:center;cursor:pointer;
-    transition:.15s;
-  }
+  .iconbtn{width:40px;height:40px;border-radius:11px;border:1px solid var(--border);
+    background:var(--surface);color:var(--text);font-size:17px;display:grid;place-items:center;cursor:pointer;transition:.15s}
   .iconbtn:active{transform:scale(.92)}
   .iconbtn.spin{animation:spin .8s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
 
+  /* ZAKLADKI */
+  .tabs{display:flex;gap:8px;margin-top:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;display:flex;align-items:center;gap:7px;padding:9px 14px;border-radius:12px;
+    border:1px solid var(--border);background:var(--surface);color:var(--muted);font-weight:700;font-size:14px;cursor:pointer;transition:.15s;white-space:nowrap}
+  .tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+  .tab .cnt{font-size:12px;font-weight:700;opacity:.8}
+  .tab .nb{min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--new);color:#1a1400;
+    font-size:11px;font-weight:800;display:inline-grid;place-items:center}
+  .tab.active .cnt{opacity:.95}
+
   .stats{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13px;color:var(--muted);flex-wrap:wrap}
-  .pill{
-    display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;
-    background:var(--surface2);border:1px solid var(--border);font-weight:600;
-  }
+  .pill{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;
+    background:var(--surface2);border:1px solid var(--border);font-weight:600}
   .pill.new{background:var(--new);color:#1a1400;border-color:transparent}
   .pill.new[hidden]{display:none}
 
-  .toolbar{display:flex;gap:8px;margin-top:10px}
-  select,.btn{
-    appearance:none;background:var(--surface);color:var(--text);border:1px solid var(--border);
-    border-radius:11px;padding:9px 12px;font-size:13px;font-weight:600;cursor:pointer;
-  }
+  .toolbar{display:flex;gap:8px;margin:10px 0 12px}
+  select,.btn{appearance:none;background:var(--surface);color:var(--text);border:1px solid var(--border);
+    border-radius:11px;padding:9px 12px;font-size:13px;font-weight:600;cursor:pointer}
   select{flex:1;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2399a0ac'><path d='M6 9L1 3h10z'/></svg>");
     background-repeat:no-repeat;background-position:right 12px center;padding-right:30px}
   .btn.toggled{background:var(--accent-soft);border-color:var(--accent);color:#fff}
 
-  /* ---------- FILTRY ---------- */
-  .filters{
-    overflow:hidden;max-height:0;transition:max-height .28s ease;
-  }
-  .filters.open{max-height:420px}
-  .filters-inner{padding:14px;margin-top:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
-  .frow{margin-bottom:12px}
-  .frow:last-child{margin-bottom:0}
+  .filters{overflow:hidden;max-height:0;transition:max-height .28s ease}
+  .filters.open{max-height:460px}
+  .filters-inner{padding:14px;margin-bottom:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
+  .frow{margin-bottom:12px}.frow:last-child{margin-bottom:0}
   .frow label{display:block;font-size:12px;color:var(--muted);font-weight:700;margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px}
   .inputs{display:flex;gap:8px}
-  .inputs input{
-    flex:1;background:var(--bg);border:1px solid var(--border);color:var(--text);
-    border-radius:10px;padding:9px 11px;font-size:14px;width:100%;
-  }
+  .inputs input{flex:1;background:var(--bg);border:1px solid var(--border);color:var(--text);border-radius:10px;padding:9px 11px;font-size:14px;width:100%}
   .chips{display:flex;gap:7px;flex-wrap:wrap}
-  .chip{
-    padding:7px 12px;border-radius:999px;border:1px solid var(--border);background:var(--bg);
-    color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;transition:.12s;
-  }
+  .chip{padding:7px 12px;border-radius:999px;border:1px solid var(--border);background:var(--bg);color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;transition:.12s}
   .chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
   .filter-actions{display:flex;gap:8px;margin-top:4px}
   .filter-actions .btn{flex:1;text-align:center}
   .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 
-  /* ---------- LISTA ---------- */
   main{padding:14px;display:grid;grid-template-columns:1fr;gap:14px;max-width:1100px;margin:0 auto}
   @media(min-width:680px){main{grid-template-columns:1fr 1fr}}
   @media(min-width:1000px){main{grid-template-columns:1fr 1fr 1fr}}
 
-  .card{
-    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-    overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
-    transition:transform .12s, border-color .12s;
-  }
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
+    box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .12s,border-color .12s}
   .card:active{transform:scale(.99)}
   .card.is-new{border-color:var(--new)}
   .thumb{position:relative;aspect-ratio:4/3;background:var(--surface2);overflow:hidden}
   .thumb img{width:100%;height:100%;object-fit:cover;display:block}
   .thumb .noimg{width:100%;height:100%;display:grid;place-items:center;color:var(--muted);font-size:40px}
-  .badge{
-    position:absolute;top:10px;font-size:11px;font-weight:800;padding:4px 9px;border-radius:8px;letter-spacing:.4px;
-  }
+  .badge{position:absolute;top:10px;font-size:11px;font-weight:800;padding:4px 9px;border-radius:8px;letter-spacing:.4px}
   .badge.src{right:10px;background:rgba(0,0,0,.65);color:#fff;text-transform:uppercase}
   .badge.new{left:10px;background:var(--new);color:#1a1400}
-
   .body{padding:13px 14px 15px;display:flex;flex-direction:column;gap:9px;flex:1}
   .title{font-size:14.5px;font-weight:700;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .price{font-size:21px;font-weight:800;color:#fff}
   .price small{font-size:13px;color:var(--muted);font-weight:600}
   .specs{display:flex;flex-wrap:wrap;gap:6px;margin-top:1px}
-  .spec{
-    display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--text);
-    background:var(--surface2);border:1px solid var(--border);padding:4px 8px;border-radius:8px;font-weight:600;
-  }
+  .spec{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--text);background:var(--surface2);
+    border:1px solid var(--border);padding:4px 8px;border-radius:8px;font-weight:600}
   .meta{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);margin-top:2px}
-  .open{
-    margin-top:auto;display:flex;align-items:center;justify-content:center;gap:7px;
-    background:var(--accent-soft);border:1px solid var(--accent);color:#fff;
-    padding:10px;border-radius:11px;font-weight:700;font-size:14px;
-  }
+  .open{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:7px;background:var(--accent-soft);
+    border:1px solid var(--accent);color:#fff;padding:10px;border-radius:11px;font-weight:700;font-size:14px}
   .open:active{background:var(--accent)}
 
-  /* ---------- STANY ---------- */
+  .more{grid-column:1/-1;display:flex;justify-content:center;margin:4px 0 8px}
+  .more button{background:var(--surface);border:1px solid var(--border);color:var(--text);font-weight:700;
+    padding:13px 22px;border-radius:12px;font-size:14px;cursor:pointer}
   .state{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted)}
   .state .big{font-size:46px;margin-bottom:10px}
-  .skeleton{height:330px;border-radius:var(--radius);background:linear-gradient(100deg,var(--surface) 30%,var(--surface2) 50%,var(--surface) 70%);background-size:200% 100%;animation:sk 1.2s infinite}
-  @keyframes sk{to{background-position:-200% 0}}
-
-  .install{
-    position:fixed;left:14px;right:14px;bottom:14px;z-index:30;
-    background:var(--accent);color:#fff;border:none;border-radius:14px;padding:14px;
-    font-weight:700;font-size:15px;display:none;align-items:center;justify-content:center;gap:8px;
-    box-shadow:0 8px 24px rgba(224,20,44,.4);max-width:500px;margin:0 auto;cursor:pointer;
-  }
+  .install{position:fixed;left:14px;right:14px;bottom:14px;z-index:30;background:var(--accent);color:#fff;border:none;
+    border-radius:14px;padding:14px;font-weight:700;font-size:15px;display:none;align-items:center;justify-content:center;gap:8px;
+    box-shadow:0 8px 24px rgba(224,20,44,.4);max-width:500px;margin:0 auto;cursor:pointer}
 </style>
 </head>
 <body>
 <header>
   <div class="bar">
-    <div class="logo">
-      <span class="car">🚗</span>
-      <div>Mazda 3 <small>Łowca ogłoszeń</small></div>
-    </div>
+    <div class="logo"><span class="car">🚗</span><div>Łowca aut <small>Mazda 3 · Corolla · C-HR</small></div></div>
     <span class="spacer"></span>
-    <button class="iconbtn" id="markRead" title="Oznacz wszystko jako przejrzane">✓</button>
+    <button class="iconbtn" id="markRead" title="Oznacz tę zakładkę jako przejrzaną">✓</button>
     <button class="iconbtn" id="refresh" title="Odśwież">⟳</button>
   </div>
+
+  <div class="tabs" id="tabs"></div>
+
   <div class="stats">
     <span class="pill" id="count">— ofert</span>
     <span class="pill new" id="newCount" hidden>0 nowych</span>
     <span class="pill" id="updated"></span>
   </div>
+
   <div class="toolbar">
     <select id="sort">
       <option value="new">Najnowsze</option>
@@ -169,28 +137,14 @@
   </div>
   <div class="filters" id="filters">
     <div class="filters-inner">
-      <div class="frow">
-        <label>Cena (zł)</label>
-        <div class="inputs">
-          <input type="number" inputmode="numeric" id="priceMin" placeholder="od">
-          <input type="number" inputmode="numeric" id="priceMax" placeholder="do">
-        </div>
-      </div>
-      <div class="frow">
-        <label>Rocznik</label>
-        <div class="inputs">
-          <input type="number" inputmode="numeric" id="yearMin" placeholder="od">
-          <input type="number" inputmode="numeric" id="yearMax" placeholder="do">
-        </div>
-      </div>
-      <div class="frow">
-        <label>Paliwo</label>
-        <div class="chips" id="fuelChips"></div>
-      </div>
-      <div class="frow">
-        <label>Źródło</label>
-        <div class="chips" id="srcChips"></div>
-      </div>
+      <div class="frow"><label>Cena (zł)</label><div class="inputs">
+        <input type="number" inputmode="numeric" id="priceMin" placeholder="od">
+        <input type="number" inputmode="numeric" id="priceMax" placeholder="do"></div></div>
+      <div class="frow"><label>Rocznik</label><div class="inputs">
+        <input type="number" inputmode="numeric" id="yearMin" placeholder="od">
+        <input type="number" inputmode="numeric" id="yearMax" placeholder="do"></div></div>
+      <div class="frow"><label>Paliwo</label><div class="chips" id="fuelChips"></div></div>
+      <div class="frow"><label>Źródło</label><div class="chips" id="srcChips"></div></div>
       <div class="filter-actions">
         <button class="btn" id="clearFilters">Wyczyść</button>
         <button class="btn primary" id="applyFilters">Pokaż wyniki</button>
@@ -200,12 +154,15 @@
 </header>
 
 <main id="list"></main>
-
 <button class="install" id="install">⬇ Zainstaluj apkę na telefonie</button>
 
 <script>
 const LS_SEEN = "m3_seen_ids_v1";
+const TAB_ORDER = ["mazda3","corolla","chr"];
+const BATCH = 60;
 let ALL = [];
+let CURRENT = null;
+let renderLimit = BATCH;
 let filters = {priceMin:null,priceMax:null,yearMin:null,yearMax:null,fuels:new Set(),srcs:new Set()};
 
 const $ = s => document.querySelector(s);
@@ -215,141 +172,141 @@ const seenSet = () => new Set(JSON.parse(localStorage.getItem(LS_SEEN) || "[]"))
 const saveSeen = set => localStorage.setItem(LS_SEEN, JSON.stringify([...set]));
 
 function engineText(o){
-  const parts = [];
-  if(o.fuel) parts.push(o.fuel);
-  if(o.engine_cm3) parts.push((o.engine_cm3/1000).toFixed(1).replace(".",",")+" l");
-  if(o.power_km) parts.push(o.power_km+" KM");
-  return parts.join(" · ");
+  const p=[]; if(o.fuel)p.push(o.fuel);
+  if(o.engine_cm3)p.push((o.engine_cm3/1000).toFixed(1).replace(".",",")+" l");
+  if(o.power_km)p.push(o.power_km+" KM");
+  return p.join(" · ");
 }
 function timeAgo(iso){
   if(!iso) return "";
-  const d = new Date(iso), diff = (Date.now()-d)/1000;
+  const d=new Date(iso), diff=(Date.now()-d)/1000;
   if(diff<3600) return Math.max(1,Math.round(diff/60))+" min temu";
   if(diff<86400) return Math.round(diff/3600)+" godz temu";
   if(diff<86400*7) return Math.round(diff/86400)+" dni temu";
   return d.toLocaleDateString("pl-PL");
 }
 
-function buildChips(){
-  const fuels = [...new Set(ALL.map(o=>o.fuel).filter(Boolean))].sort();
-  const srcs  = [...new Set(ALL.map(o=>o.source).filter(Boolean))].sort();
-  $("#fuelChips").innerHTML = fuels.map(f=>`<button class="chip" data-fuel="${f}">${f}</button>`).join("") || '<span style="color:var(--muted);font-size:13px">—</span>';
-  $("#srcChips").innerHTML  = srcs.map(s=>`<button class="chip" data-src="${s}">${s.toUpperCase()}</button>`).join("");
-  document.querySelectorAll("[data-fuel]").forEach(c=>c.onclick=()=>{c.classList.toggle("on");toggle(filters.fuels,c.dataset.fuel,c.classList.contains("on"))});
-  document.querySelectorAll("[data-src]").forEach(c=>c.onclick=()=>{c.classList.toggle("on");toggle(filters.srcs,c.dataset.src,c.classList.contains("on"))});
+function modelsPresent(){
+  const set=[...new Set(ALL.map(o=>o.model))];
+  return set.sort((a,b)=>{const ia=TAB_ORDER.indexOf(a),ib=TAB_ORDER.indexOf(b);return (ia<0?99:ia)-(ib<0?99:ib);});
 }
-function toggle(set,val,on){ on?set.add(val):set.delete(val); }
+function labelOf(m){ const x=ALL.find(o=>o.model===m); return x?x.model_label:m; }
+
+function buildTabs(){
+  const seen=seenSet();
+  const models=modelsPresent();
+  if(!CURRENT || !models.includes(CURRENT)) CURRENT = models[0] || null;
+  $("#tabs").innerHTML = models.map(m=>{
+    const all=ALL.filter(o=>o.model===m);
+    const nw=all.filter(o=>!seen.has(o.id)).length;
+    return `<button class="tab ${m===CURRENT?'active':''}" data-m="${m}">
+      ${labelOf(m)} <span class="cnt">${all.length}</span>${nw?`<span class="nb">${nw}</span>`:''}</button>`;
+  }).join("");
+  document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
+    CURRENT=t.dataset.m; renderLimit=BATCH;
+    document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active", x===t));
+    filters.fuels.clear(); filters.srcs.clear();
+    buildChips(); render(); window.scrollTo(0,0);
+  });
+}
+
+function buildChips(){
+  const inTab=ALL.filter(o=>o.model===CURRENT);
+  const fuels=[...new Set(inTab.map(o=>o.fuel).filter(Boolean))].sort();
+  const srcs=[...new Set(inTab.map(o=>o.source).filter(Boolean))].sort();
+  $("#fuelChips").innerHTML = fuels.map(f=>`<button class="chip ${filters.fuels.has(f)?'on':''}" data-fuel="${f}">${f}</button>`).join("") || '<span style="color:var(--muted);font-size:13px">—</span>';
+  $("#srcChips").innerHTML = srcs.map(s=>`<button class="chip ${filters.srcs.has(s)?'on':''}" data-src="${s}">${s.toUpperCase()}</button>`).join("");
+  document.querySelectorAll("[data-fuel]").forEach(c=>c.onclick=()=>{c.classList.toggle("on");tog(filters.fuels,c.dataset.fuel,c.classList.contains("on"))});
+  document.querySelectorAll("[data-src]").forEach(c=>c.onclick=()=>{c.classList.toggle("on");tog(filters.srcs,c.dataset.src,c.classList.contains("on"))});
+}
+function tog(set,v,on){ on?set.add(v):set.delete(v); }
+const numOr = v => { const n=parseInt(v,10); return isNaN(n)?null:n; };
 
 function applyFilters(){
-  filters.priceMin = numOr($("#priceMin").value);
-  filters.priceMax = numOr($("#priceMax").value);
-  filters.yearMin  = numOr($("#yearMin").value);
-  filters.yearMax  = numOr($("#yearMax").value);
-  render();
+  filters.priceMin=numOr($("#priceMin").value); filters.priceMax=numOr($("#priceMax").value);
+  filters.yearMin=numOr($("#yearMin").value); filters.yearMax=numOr($("#yearMax").value);
+  renderLimit=BATCH; render();
 }
-const numOr = v => { const n = parseInt(v,10); return isNaN(n)?null:n; };
-
 function passes(o){
-  if(filters.priceMin!=null && (o.price_pln==null || o.price_pln<filters.priceMin)) return false;
-  if(filters.priceMax!=null && (o.price_pln==null || o.price_pln>filters.priceMax)) return false;
-  if(filters.yearMin!=null  && (o.year==null || o.year<filters.yearMin)) return false;
-  if(filters.yearMax!=null  && (o.year==null || o.year>filters.yearMax)) return false;
+  if(o.model!==CURRENT) return false;
+  if(filters.priceMin!=null && (o.price_pln==null||o.price_pln<filters.priceMin)) return false;
+  if(filters.priceMax!=null && (o.price_pln==null||o.price_pln>filters.priceMax)) return false;
+  if(filters.yearMin!=null && (o.year==null||o.year<filters.yearMin)) return false;
+  if(filters.yearMax!=null && (o.year==null||o.year>filters.yearMax)) return false;
   if(filters.fuels.size && !filters.fuels.has(o.fuel)) return false;
-  if(filters.srcs.size  && !filters.srcs.has(o.source)) return false;
+  if(filters.srcs.size && !filters.srcs.has(o.source)) return false;
   return true;
 }
-
 function sortList(list){
-  const v = $("#sort").value;
-  const key = {
-    price_asc:o=>o.price_pln??Infinity, price_desc:o=>-(o.price_pln??-Infinity),
-    year_desc:o=>-(o.year??-Infinity), mileage_asc:o=>o.mileage_km??Infinity,
-  }[v];
+  const v=$("#sort").value;
+  const key={price_asc:o=>o.price_pln??Infinity,price_desc:o=>-(o.price_pln??-Infinity),
+    year_desc:o=>-(o.year??-Infinity),mileage_asc:o=>o.mileage_km??Infinity}[v];
   if(key) return [...list].sort((a,b)=>key(a)-key(b));
   return [...list].sort((a,b)=>(b.created||b.first_seen||"").localeCompare(a.created||a.first_seen||""));
 }
 
+function cardHTML(o,isNew){
+  const img=o.photo?`<img loading="lazy" src="${o.photo}" alt="" onerror="this.parentNode.innerHTML='<div class=&quot;noimg&quot;>🚗</div>'">`:`<div class="noimg">🚗</div>`;
+  const specs=[o.year&&`📅 ${o.year}`, o.mileage_km!=null&&`🛣 ${fmt(o.mileage_km)} km`,
+    engineText(o)&&`⚙ ${engineText(o)}`, o.gearbox&&`🔧 ${o.gearbox}`, o.body&&`🚙 ${o.body}`]
+    .filter(Boolean).map(s=>`<span class="spec">${s}</span>`).join("");
+  return `<article class="card ${isNew?'is-new':''}">
+    <div class="thumb">${img}${isNew?'<span class="badge new">NOWE</span>':''}<span class="badge src">${(o.source||'').toUpperCase()}</span></div>
+    <div class="body">
+      <div class="title">${o.title||o.model_label}</div>
+      <div class="price">${o.price_pln!=null?fmt(o.price_pln)+' <small>zł</small>':'<small>cena: zapytaj</small>'}</div>
+      <div class="specs">${specs}</div>
+      <div class="meta">📍 ${o.city||'—'} • ${timeAgo(o.created||o.first_seen)}</div>
+      <a class="open" href="${o.url}" target="_blank" rel="noopener">Otwórz ofertę ↗</a>
+    </div></article>`;
+}
+
 function render(){
-  const seen = seenSet();
-  const filtered = ALL.filter(passes);
-  const list = sortList(filtered);
-  const newOnes = ALL.filter(o=>!seen.has(o.id)).length;
+  const seen=seenSet();
+  const list=sortList(ALL.filter(passes));
+  const nw=ALL.filter(o=>o.model===CURRENT && !seen.has(o.id)).length;
+  $("#count").textContent = `${list.length} ${plural(list.length,'oferta','oferty','ofert')}`;
+  const nc=$("#newCount");
+  if(nw>0){nc.hidden=false;nc.textContent=`${nw} ${plural(nw,'nowa','nowe','nowych')}`;}else nc.hidden=true;
 
-  $("#count").textContent = `${ALL.length} ${plural(ALL.length,'oferta','oferty','ofert')}`;
-  const nc = $("#newCount");
-  if(newOnes>0){ nc.hidden=false; nc.textContent = `${newOnes} ${plural(newOnes,'nowa','nowe','nowych')}`; } else nc.hidden=true;
-
-  const main = $("#list");
-  if(!list.length){
-    main.innerHTML = `<div class="state"><div class="big">🔍</div>Brak ofert spełniających filtry.</div>`;
-    return;
+  const main=$("#list");
+  if(!list.length){ main.innerHTML=`<div class="state"><div class="big">🔍</div>Brak ofert w tej zakładce/filtrach.</div>`; return; }
+  const shown=list.slice(0,renderLimit);
+  let html=shown.map(o=>cardHTML(o,!seen.has(o.id))).join("");
+  if(list.length>renderLimit){
+    html+=`<div class="more"><button id="moreBtn">Pokaż więcej (${list.length-renderLimit})</button></div>`;
   }
-  main.innerHTML = list.map(o=>{
-    const isNew = !seen.has(o.id);
-    const img = o.photo ? `<img loading="lazy" src="${o.photo}" alt="" onerror="this.parentNode.innerHTML='<div class=&quot;noimg&quot;>🚗</div>'">` : `<div class="noimg">🚗</div>`;
-    const specs = [
-      o.year && `📅 ${o.year}`,
-      o.mileage_km!=null && `🛣 ${fmt(o.mileage_km)} km`,
-      engineText(o) && `⚙ ${engineText(o)}`,
-      o.gearbox && `🔧 ${o.gearbox}`,
-      o.body && `🚙 ${o.body}`,
-    ].filter(Boolean).map(s=>`<span class="spec">${s}</span>`).join("");
-    return `<article class="card ${isNew?'is-new':''}">
-      <div class="thumb">
-        ${img}
-        ${isNew?'<span class="badge new">NOWE</span>':''}
-        <span class="badge src">${(o.source||'').toUpperCase()}</span>
-      </div>
-      <div class="body">
-        <div class="title">${o.title||'Mazda 3'}</div>
-        <div class="price">${o.price_pln!=null?fmt(o.price_pln)+' <small>zł</small>':'<small>cena: zapytaj</small>'}</div>
-        <div class="specs">${specs}</div>
-        <div class="meta">📍 ${o.city||'—'} • ${timeAgo(o.created||o.first_seen)}</div>
-        <a class="open" href="${o.url}" target="_blank" rel="noopener">Otwórz ofertę ↗</a>
-      </div>
-    </article>`;
-  }).join("");
+  main.innerHTML=html;
+  const mb=$("#moreBtn"); if(mb) mb.onclick=()=>{ renderLimit+=BATCH; render(); };
 }
 
 async function load(){
-  const btn = $("#refresh"); btn.classList.add("spin");
+  const btn=$("#refresh"); btn.classList.add("spin");
   try{
-    const r = await fetch("listings.json?cb="+Date.now(), {cache:"no-store"});
-    ALL = await r.json();
-    // Pierwszy start: obecne oferty = baza (zero plakietek NOWE).
-    // NOWE pojawi sie dopiero dla ofert dodanych pozniej.
-    if(localStorage.getItem(LS_SEEN)===null){ saveSeen(new Set(ALL.map(o=>o.id))); }
-    buildChips();
-    render();
-    const now = new Date();
-    $("#updated").textContent = "⟳ "+now.toLocaleTimeString("pl-PL",{hour:"2-digit",minute:"2-digit"});
+    const r=await fetch("listings.json?cb="+Date.now(),{cache:"no-store"});
+    ALL=await r.json();
+    if(localStorage.getItem(LS_SEEN)===null) saveSeen(new Set(ALL.map(o=>o.id)));
+    buildTabs(); buildChips(); render();
+    $("#updated").textContent="⟳ "+new Date().toLocaleTimeString("pl-PL",{hour:"2-digit",minute:"2-digit"});
   }catch(e){
-    $("#list").innerHTML = `<div class="state"><div class="big">⚠️</div>Nie udało się wczytać ofert.<br><small>${e}</small></div>`;
+    $("#list").innerHTML=`<div class="state"><div class="big">⚠️</div>Nie udało się wczytać ofert.<br><small>${e}</small></div>`;
   }finally{ btn.classList.remove("spin"); }
 }
 
-// --- zdarzenia ---
-$("#refresh").onclick = load;
-$("#sort").onchange = render;
-$("#filterToggle").onclick = e => { $("#filters").classList.toggle("open"); e.currentTarget.classList.toggle("toggled"); };
-$("#applyFilters").onclick = ()=>{ applyFilters(); $("#filters").classList.remove("open"); $("#filterToggle").classList.remove("toggled"); };
-$("#clearFilters").onclick = ()=>{
-  filters = {priceMin:null,priceMax:null,yearMin:null,yearMax:null,fuels:new Set(),srcs:new Set()};
-  ["priceMin","priceMax","yearMin","yearMax"].forEach(id=>$("#"+id).value="");
-  document.querySelectorAll(".chip.on").forEach(c=>c.classList.remove("on"));
-  render();
-};
-$("#markRead").onclick = ()=>{ saveSeen(new Set(ALL.map(o=>o.id))); render(); };
+$("#refresh").onclick=load;
+$("#sort").onchange=()=>{renderLimit=BATCH;render();};
+$("#filterToggle").onclick=e=>{ $("#filters").classList.toggle("open"); e.currentTarget.classList.toggle("toggled"); };
+$("#applyFilters").onclick=()=>{ applyFilters(); $("#filters").classList.remove("open"); $("#filterToggle").classList.remove("toggled"); };
+$("#clearFilters").onclick=()=>{ filters={priceMin:null,priceMax:null,yearMin:null,yearMax:null,fuels:new Set(),srcs:new Set()};
+  ["priceMin","priceMax","yearMin","yearMax"].forEach(id=>$("#"+id).value=""); buildChips(); renderLimit=BATCH; render(); };
+$("#markRead").onclick=()=>{ const s=seenSet(); ALL.filter(o=>o.model===CURRENT).forEach(o=>s.add(o.id)); saveSeen(s); buildTabs(); render(); };
 document.addEventListener("visibilitychange",()=>{ if(!document.hidden) load(); });
 
-// PWA install
 let deferredPrompt=null;
 window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); deferredPrompt=e; $("#install").style.display="flex"; });
-$("#install").onclick = async ()=>{ if(!deferredPrompt)return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; $("#install").style.display="none"; };
+$("#install").onclick=async()=>{ if(!deferredPrompt)return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; $("#install").style.display="none"; };
 window.addEventListener("appinstalled",()=>{ $("#install").style.display="none"; });
-
 if("serviceWorker" in navigator){ navigator.serviceWorker.register("sw.js").catch(()=>{}); }
-
 load();
 </script>
 </body>
