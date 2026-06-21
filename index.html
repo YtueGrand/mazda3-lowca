@@ -112,9 +112,6 @@
   .deal.good{background:rgba(52,211,153,.14);color:#34d399;border-color:rgba(52,211,153,.4)}
   .deal.bad{background:rgba(224,20,44,.12);color:#ff7088;border-color:rgba(224,20,44,.4)}
   .deal.mid{background:var(--surface2);color:var(--muted);border-color:var(--border)}
-  .summary{grid-column:1/-1;background:var(--surface);border:1px solid var(--border);border-radius:12px;
-    padding:11px 14px;font-size:13px;color:var(--text);display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
-  .summary b{color:#fff}.summary .lbl{color:var(--muted);font-weight:600;margin-right:4px}
   .more{grid-column:1/-1;display:flex;justify-content:center;margin:4px 0 8px}
   .more button{background:var(--surface);border:1px solid var(--border);color:var(--text);font-weight:700;
     padding:13px 22px;border-radius:12px;font-size:14px;cursor:pointer}
@@ -231,19 +228,11 @@ function valuation(o){
 function dealHTML(o){
   const v=valuation(o); if(!v) return '';
   const ap=Math.abs(Math.round(v.pct*100));
-  let cls='mid', txt='≈ cena rynkowa';
-  if(v.pct<=-0.02){ cls='good'; txt=(v.pct<=-0.10?'🟢 OKAZJA · ':'🟢 ')+ap+'% poniżej rynku'; }
-  else if(v.pct>=0.02){ cls='bad'; txt='🔴 '+ap+'% powyżej rynku'; }
-  return `<div class="deal ${cls}">${txt} · wycena ~${fmt(v.pred)} zł</div>`;
-}
-function summaryHTML(list){
-  const ps=list.map(o=>o.price_pln).filter(Number.isFinite);
-  if(ps.length<2) return '';
-  return `<div class="summary">
-    <span><span class="lbl">📊</span><b>${list.length}</b> ofert</span>
-    <span><span class="lbl">średnia</span><b>${fmt(Math.round(avg(ps)))} zł</b></span>
-    <span><span class="lbl">mediana</span><b>${fmt(Math.round(median(ps)))} zł</b></span>
-    <span><span class="lbl">zakres</span><b>${fmt(Math.min(...ps))}–${fmt(Math.max(...ps))} zł</b></span></div>`;
+  // 'norma' = cena oczekiwana dla TEGO rocznika i przebiegu (z innych aut modelu)
+  let cls='mid', txt=`≈ cena w normie · ~${fmt(v.pred)} zł (rok+przebieg)`;
+  if(v.pct<=-0.05){ cls='good'; txt=`🟢 ${v.pct<=-0.12?'OKAZJA — ':''}${ap}% taniej niż norma · norma ~${fmt(v.pred)} zł`; }
+  else if(v.pct>=0.05){ cls='bad'; txt=`🔴 ZAWYŻONA o ${ap}% · norma ~${fmt(v.pred)} zł`; }
+  return `<div class="deal ${cls}">${txt}</div>`;
 }
 
 function engineText(o){
@@ -359,7 +348,7 @@ function render(){
   const main=$("#list");
   if(!list.length){ main.innerHTML=`<div class="state"><div class="big">🔍</div>Brak ofert w tej zakładce/filtrach.</div>`; return; }
   const shown=list.slice(0,renderLimit);
-  let html=summaryHTML(list)+shown.map(o=>cardHTML(o,!seen.has(o.id))).join("");
+  let html=shown.map(o=>cardHTML(o,!seen.has(o.id))).join("");
   if(list.length>renderLimit){
     html+=`<div class="more"><button id="moreBtn">Pokaż więcej (${list.length-renderLimit})</button></div>`;
   }
