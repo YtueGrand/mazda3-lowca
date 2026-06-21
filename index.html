@@ -108,6 +108,13 @@
     border:1px solid var(--accent);color:#fff;padding:10px;border-radius:11px;font-weight:700;font-size:14px}
   .open:active{background:var(--accent)}
 
+  .deal{font-size:12px;font-weight:700;padding:5px 9px;border-radius:8px;width:fit-content;border:1px solid transparent}
+  .deal.good{background:rgba(52,211,153,.14);color:#34d399;border-color:rgba(52,211,153,.4)}
+  .deal.bad{background:rgba(224,20,44,.12);color:#ff7088;border-color:rgba(224,20,44,.4)}
+  .deal.mid{background:var(--surface2);color:var(--muted);border-color:var(--border)}
+  .summary{grid-column:1/-1;background:var(--surface);border:1px solid var(--border);border-radius:12px;
+    padding:11px 14px;font-size:13px;color:var(--text);display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
+  .summary b{color:#fff}.summary .lbl{color:var(--muted);font-weight:600;margin-right:4px}
   .more{grid-column:1/-1;display:flex;justify-content:center;margin:4px 0 8px}
   .more button{background:var(--surface);border:1px solid var(--border);color:var(--text);font-weight:700;
     padding:13px 22px;border-radius:12px;font-size:14px;cursor:pointer}
@@ -177,7 +184,7 @@
 
 <script>
 const LS_SEEN = "m3_seen_ids_v1";
-const TAB_ORDER = ["mazda3","corolla","chr"];
+const TAB_ORDER = ["mazda3","mazda6","corolla"];
 const BATCH = 60;
 let ALL = [];
 let CURRENT = null;
@@ -191,6 +198,53 @@ const fmt = n => n==null ? null : n.toLocaleString("pl-PL");
 const plural = (n,one,few,many) => { const a=n%10,b=n%100; return n===1?one:(a>=2&&a<=4&&!(b>=12&&b<=14))?few:many; };
 const seenSet = () => new Set(JSON.parse(localStorage.getItem(LS_SEEN) || "[]"));
 const saveSeen = set => localStorage.setItem(LS_SEEN, JSON.stringify([...set]));
+
+/* ---------- STATYSTYKI / WYCENA RYNKOWA ---------- */
+let REG = {};   // model -> dopasowanie regresji (cena ~ rocznik + przebieg)
+const avg = a => a.length ? a.reduce((s,x)=>s+x,0)/a.length : null;
+function median(a){ if(!a.length) return null; const s=[...a].sort((x,y)=>x-y),n=s.length; return n%2?s[(n-1)/2]:(s[n/2-1]+s[n/2])/2; }
+function regression(rows){
+  let pts=rows.filter(r=>Number.isFinite(r.year)&&Number.isFinite(r.mileage_km)&&Number.isFinite(r.price_pln));
+  if(pts.length<6) return null;
+  const med=median(pts.map(p=>p.price_pln));               // odetnij ekstrema przy dopasowaniu
+  pts=pts.filter(p=>p.price_pln>=med*0.25 && p.price_pln<=med*3);
+  if(pts.length<6) return null;
+  const my=avg(pts.map(p=>p.year)), mk=avg(pts.map(p=>p.mileage_km)), mp=avg(pts.map(p=>p.price_pln));
+  let Sxx=0,Szz=0,Sxz=0,Sxy=0,Szy=0;
+  for(const p of pts){ const x=p.year-my,z=p.mileage_km-mk,y=p.price_pln-mp;
+    Sxx+=x*x;Szz+=z*z;Sxz+=x*z;Sxy+=x*y;Szy+=z*y; }
+  const det=Sxx*Szz-Sxz*Sxz; if(Math.abs(det)<1e-3) return null;
+  return {my,mk,mp,b1:(Sxy*Szz-Szy*Sxz)/det, b2:(Szy*Sxx-Sxy*Sxz)/det, n:pts.length};
+}
+function computeStats(){
+  REG={}; const byModel={};
+  ALL.forEach(o=>{ (byModel[o.model]=byModel[o.model]||[]).push(o); });
+  for(const m in byModel) REG[m]=regression(byModel[m]);
+}
+function valuation(o){
+  const r=REG[o.model];
+  if(!r||!Number.isFinite(o.year)||!Number.isFinite(o.mileage_km)||!Number.isFinite(o.price_pln)) return null;
+  const pred=r.mp + r.b1*(o.year-r.my) + r.b2*(o.mileage_km-r.mk);
+  if(pred<3000) return null;
+  return {pred:Math.round(pred), pct:(o.price_pln-pred)/pred};
+}
+function dealHTML(o){
+  const v=valuation(o); if(!v) return '';
+  const ap=Math.abs(Math.round(v.pct*100));
+  let cls='mid', txt='≈ cena rynkowa';
+  if(v.pct<=-0.02){ cls='good'; txt=(v.pct<=-0.10?'🟢 OKAZJA · ':'🟢 ')+ap+'% poniżej rynku'; }
+  else if(v.pct>=0.02){ cls='bad'; txt='🔴 '+ap+'% powyżej rynku'; }
+  return `<div class="deal ${cls}">${txt} · wycena ~${fmt(v.pred)} zł</div>`;
+}
+function summaryHTML(list){
+  const ps=list.map(o=>o.price_pln).filter(Number.isFinite);
+  if(ps.length<2) return '';
+  return `<div class="summary">
+    <span><span class="lbl">📊</span><b>${list.length}</b> ofert</span>
+    <span><span class="lbl">średnia</span><b>${fmt(Math.round(avg(ps)))} zł</b></span>
+    <span><span class="lbl">mediana</span><b>${fmt(Math.round(median(ps)))} zł</b></span>
+    <span><span class="lbl">zakres</span><b>${fmt(Math.min(...ps))}–${fmt(Math.max(...ps))} zł</b></span></div>`;
+}
 
 function engineText(o){
   const p=[]; if(o.fuel)p.push(o.fuel);
@@ -287,6 +341,7 @@ function cardHTML(o,isNew){
     <div class="body">
       <div class="title">${o.title||o.model_label}</div>
       <div class="price">${o.price_pln!=null?fmt(o.price_pln)+' <small>zł</small>':'<small>cena: zapytaj</small>'}</div>
+      ${dealHTML(o)}
       <div class="specs">${specs}</div>
       <div class="meta">📍 ${o.city||'—'}${distStr} • ${timeAgo(o.created||o.first_seen)}</div>
       <a class="open" href="${o.url}" target="_blank" rel="noopener">Otwórz ofertę ↗</a>
@@ -304,7 +359,7 @@ function render(){
   const main=$("#list");
   if(!list.length){ main.innerHTML=`<div class="state"><div class="big">🔍</div>Brak ofert w tej zakładce/filtrach.</div>`; return; }
   const shown=list.slice(0,renderLimit);
-  let html=shown.map(o=>cardHTML(o,!seen.has(o.id))).join("");
+  let html=summaryHTML(list)+shown.map(o=>cardHTML(o,!seen.has(o.id))).join("");
   if(list.length>renderLimit){
     html+=`<div class="more"><button id="moreBtn">Pokaż więcej (${list.length-renderLimit})</button></div>`;
   }
@@ -317,6 +372,7 @@ async function load(){
   try{
     const r=await fetch("listings.json?cb="+Date.now(),{cache:"no-store"});
     ALL=await r.json();
+    computeStats();
     if(localStorage.getItem(LS_SEEN)===null) saveSeen(new Set(ALL.map(o=>o.id)));
     buildTabs();
     document.querySelectorAll("#regionSeg .seg-btn").forEach(x=>x.classList.toggle("active",x.dataset.reg===regionFilter));
