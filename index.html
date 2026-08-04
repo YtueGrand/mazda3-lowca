@@ -406,7 +406,11 @@ let deferredPrompt=null;
 window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); deferredPrompt=e; $("#install").style.display="flex"; });
 $("#install").onclick=async()=>{ if(!deferredPrompt)return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; $("#install").style.display="none"; };
 window.addEventListener("appinstalled",()=>{ $("#install").style.display="none"; });
-if("serviceWorker" in navigator){ navigator.serviceWorker.register("sw.js").catch(()=>{}); }
+if("serviceWorker" in navigator){
+  navigator.serviceWorker.register("sw.js", {updateViaCache:"none"}).catch(()=>{});
+  let _refreshing=false;
+  navigator.serviceWorker.addEventListener("controllerchange", ()=>{ if(_refreshing) return; _refreshing=true; location.reload(); });
+}
 load();
 </script>
 </body>

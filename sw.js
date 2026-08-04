@@ -1,6 +1,6 @@
 /* Service worker — app shell cache + zawsze swieze listings.json.
    Push obsluzymy w kolejnym etapie (Web Push / VAPID). */
-const CACHE = "m3-lowca-v2";
+const CACHE = "m3-lowca-v3";
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", e => {
@@ -16,8 +16,13 @@ self.addEventListener("activate", e => {
 
 self.addEventListener("fetch", e => {
   if (e.request.method !== "GET") return;
-  // Siec-first: zawsze swieze pliki (oferty + aktualizacje apki),
-  // cache tylko jako fallback offline.
+  const url = new URL(e.request.url);
+  // listings.json: ZAWSZE z sieci, nigdy z cache (gwarancja swiezych ofert).
+  if (url.pathname.endsWith("listings.json")) {
+    e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+    return;
+  }
+  // Reszta (shell): siec-first, cache tylko jako fallback offline.
   e.respondWith(
     fetch(e.request).then(r => {
       const copy = r.clone();
